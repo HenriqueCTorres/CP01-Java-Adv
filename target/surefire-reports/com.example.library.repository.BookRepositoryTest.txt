@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.example.library.repository.BookRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.184 s <<< FAILURE! -- in com.example.library.repository.BookRepositoryTest
+com.example.library.repository.BookRepositoryTest.findByPriceRange -- Time elapsed: 0.016 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected size: 1 but was: 0 in:
+[]
+	at com.example.library.repository.BookRepositoryTest.findByPriceRange(BookRepositoryTest.java:117)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

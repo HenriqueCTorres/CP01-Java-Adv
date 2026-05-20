@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------
+Test set: com.example.library.service.BookServiceTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 0.162 s <<< FAILURE! -- in com.example.library.service.BookServiceTest
+com.example.library.service.BookServiceTest.getGenreStats -- Time elapsed: 0.101 s <<< ERROR!
+java.lang.ClassCastException: class java.lang.Long cannot be cast to class java.lang.String (java.lang.Long and java.lang.String are in module java.base of loader 'bootstrap')
+	at com.example.library.service.BookService.lambda$getGenreStats$2(BookService.java:87)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at com.example.library.service.BookService.getGenreStats(BookService.java:92)
+	at com.example.library.service.BookServiceTest.getGenreStats(BookServiceTest.java:152)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.service.BookServiceTest.create_success -- Time elapsed: 0.022 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.example.library.service.BookServiceTest.create_success(BookServiceTest.java:87)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.service.BookServiceTest.create_authorNotFound -- Time elapsed: 0.003 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.example.library.service.BookServiceTest.create_authorNotFound(BookServiceTest.java:109)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.service.BookServiceTest.create_duplicateIsbn -- Time elapsed: 0.012 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual throwable to be an instance of:
+  com.example.library.exception.BusinessException
+but was:
+  com.example.library.exception.ResourceNotFoundException: Author not found with id: 1
+	at com.example.library.service.BookService.lambda$create$3(BookService.java:104)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.example.library.service.BookService.create(BookService.java:104)
+	...(75 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
+	at com.example.library.service.BookServiceTest.create_duplicateIsbn(BookServiceTest.java:101)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

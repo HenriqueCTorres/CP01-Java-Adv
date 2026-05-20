@@ -1,0 +1,125 @@
+-------------------------------------------------------------------------------
+Test set: com.example.library.integration.LibraryIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 3.154 s <<< FAILURE! -- in com.example.library.integration.LibraryIntegrationTest
+com.example.library.integration.LibraryIntegrationTest.createAuthor -- Time elapsed: 0.028 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.createAuthor(LibraryIntegrationTest.java:130)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.getAuthorById -- Time elapsed: 0.005 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.getAuthorById(LibraryIntegrationTest.java:159)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.updateAuthor -- Time elapsed: 0.007 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.updateAuthor(LibraryIntegrationTest.java:197)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.createBook -- Time elapsed: 0.012 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<400>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.createBook(LibraryIntegrationTest.java:225)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.getBookById -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.getBookById(LibraryIntegrationTest.java:242)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.patchBookAvailability -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.patchBookAvailability(LibraryIntegrationTest.java:271)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.getGenreStats -- Time elapsed: 0.012 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.getGenreStats(LibraryIntegrationTest.java:281)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.findBooksByAuthor -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.findBooksByAuthor(LibraryIntegrationTest.java:302)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.createBook_duplicateIsbn -- Time elapsed: 0.005 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<409> but was:<400>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.createBook_duplicateIsbn(LibraryIntegrationTest.java:319)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.deleteBook -- Time elapsed: 0.005 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<204> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.deleteBook(LibraryIntegrationTest.java:332)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.library.integration.LibraryIntegrationTest.deleteAuthor -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<204> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.library.integration.LibraryIntegrationTest.deleteAuthor(LibraryIntegrationTest.java:341)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

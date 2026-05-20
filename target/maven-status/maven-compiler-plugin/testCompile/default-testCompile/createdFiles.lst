@@ -1,0 +1,15 @@
+com\example\library\service\JwtUtilTest.class
+com\example\library\service\AuthorServiceTest$Delete.class
+com\example\library\service\AuthorServiceTest$Update.class
+com\example\library\service\AuthorServiceTest.class
+com\example\library\service\AuthorServiceTest$Create.class
+com\example\library\service\AuthorServiceTest$FindById.class
+com\example\library\integration\LibraryIntegrationTest.class
+com\example\library\service\AuthServiceTest.class
+com\example\library\repository\AuthorRepositoryTest.class
+com\example\library\service\AuthorServiceTest$FindAll.class
+com\example\library\controller\BookControllerTest.class
+com\example\library\config\TestSecurityConfig.class
+com\example\library\controller\AuthorControllerTest.class
+com\example\library\repository\BookRepositoryTest.class
+com\example\library\service\BookServiceTest.class
