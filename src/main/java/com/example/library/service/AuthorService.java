@@ -49,7 +49,7 @@ public class AuthorService {
     }
 
     @Transactional
-    @CachePut(value = CacheConfig.AUTHORS_CACHE, key = "#id")
+    @CachePut(value = CacheConfig.AUTHORS_CACHE, key = "#result.id")
     public Author create(AuthorDTO.Request request) {
         if (request.getEmail() != null && authorRepository.existsByEmail(request.getEmail())) {
             throw new BusinessException("Author with email '" + request.getEmail() + "' already exists");
@@ -90,6 +90,9 @@ public class AuthorService {
     @CacheEvict(value = CacheConfig.AUTHORS_CACHE, key = "#id")
     public void delete(Long id) {
         Author author = findById(id);
+        if (!author.getBooks().isEmpty()) {
+            throw new BusinessException("Cannot delete author with existing books. Remove the books first.");
+        }
         authorRepository.delete(author);
         log.info("Deleted author id={}", id);
     }

@@ -24,6 +24,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.net.URI;
 import java.util.List;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
@@ -100,7 +101,8 @@ public class AuthorController {
             @Valid @RequestBody AuthorDTO.Request request) {
         Author author = authorService.create(request);
         EntityModel<AuthorDTO.Response> model = assembler.toModel(author);
-        return ResponseEntity.ok(model);
+        return ResponseEntity.created(URI.create("/api/v1/authors/" + author.getId()))
+                .body(model);
     }
 
     @PutMapping("/{id}")

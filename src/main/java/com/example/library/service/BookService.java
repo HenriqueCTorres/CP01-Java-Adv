@@ -85,8 +85,8 @@ public class BookService {
     public List<BookDTO.GenreStats> getGenreStats() {
         return bookRepository.getStatsByGenre().stream()
                 .map(row -> BookDTO.GenreStats.builder()
-                        .genre((String) row[1])
-                        .count((Long) row[0])
+                        .genre((String) row[0])
+                        .count((Long) row[1])
                         .averagePrice(row[2] != null ? BigDecimal.valueOf((Double) row[2]) : null)
                         .build())
                 .collect(Collectors.toList());
@@ -100,6 +100,10 @@ public class BookService {
     @CachePut(value = CacheConfig.BOOKS_CACHE, key = "#result.id")
     @CacheEvict(value = CacheConfig.GENRE_STATS_CACHE, allEntries = true)
     public Book create(BookDTO.Request request) {
+        if (bookRepository.existsByIsbn(request.getIsbn())) {
+            throw new BusinessException("ISBN '" + request.getIsbn() + "' is already in use");
+        }
+
         Author author = authorRepository.findById(request.getAuthorId())
                 .orElseThrow(() -> new ResourceNotFoundException("Author", request.getAuthorId()));
 

@@ -37,7 +37,7 @@ public interface BookRepository extends JpaRepository<Book, Long>, JpaSpecificat
     Page<Book> searchByTitleOrDescription(@Param("query") String query, Pageable pageable);
 
     // Price range filter
-    @Query("SELECT b FROM Book b WHERE b.price BETWEEN :max AND :min")
+    @Query("SELECT b FROM Book b WHERE b.price BETWEEN :min AND :max")
     Page<Book> findByPriceRange(@Param("min") BigDecimal min,
                                  @Param("max") BigDecimal max,
                                  Pageable pageable);
